@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './styles.css';
 
 function Listing() {
@@ -35,7 +36,9 @@ function Listing() {
                         <button type="submit" className="btn btn-primary projetox-btn">Salvar</button>
                     </div>
                 </form >
-                <button className="btn btn-primary projetox-btn mt-3">Cancelar</button>
+                <Link to="/">
+                <button className="btn btn-primary projetox-btn mt-3" >Cancelar</button>
+                </Link>
             </div >
         </div >
     );

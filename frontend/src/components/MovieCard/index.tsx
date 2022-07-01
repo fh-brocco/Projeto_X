@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import MovieScore from 'components/MovieScore';
 
 
@@ -15,13 +15,16 @@ function MovieCard() {
     return (
 
         <div>
-        <img className="projetox-movie-card-image" src={movie.image} alt={movie.title} />
-        <div className="projetox-card-bottom-container">
-            <h3>{movie.title}</h3>
-            <MovieScore />
-            <div className="btn btn-primary projetox-btn">Avaliar</div>
+            <img className="projetox-movie-card-image" src={movie.image} alt={movie.title} />
+            <div className="projetox-card-bottom-container">
+                <h3>{movie.title}</h3>
+                <MovieScore />
+
+                <Link to={`/form/${movie.id}`}>
+                    <div className="btn btn-primary projetox-btn">Avaliar</div>
+                </Link>
+            </div>
         </div>
-    </div>
 
     );
 }
